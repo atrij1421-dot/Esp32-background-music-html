@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <!--this is called a comment , it is used to type messages to inform the user(here,you sayan) about something-->
+    <!--*this is the html tag to define the beginning*-->
+    <head> <title>
+        <!--this is the title tag type anything here and it appears in the browser tab-->
+        Sayan's tutorial
+        </title>
+    </head>
+    <body>
+        <!--here i am type <div>, it is a tag , that defines a container, if you want i can tell you more in call, just let me know!-->
+        <div id="sayan ghondol">
+        <!--this is the body tag where you write the content of your webpage-->
+        <h1>Welcome to Sayan's tutorial</h1>
+        <!--this is the heading tag it is used to write headings in your webpage-->
+        <p>This is a simple HTML page to demonstrate the structure of an HTML document.</p>
+        <!--this is the paragraph tag it is used to write paragraphs in your webpage-->
+        <ul>
+            <!--this is the unordered list tag it is used to create a list of items-->
+            <li>HTML stands for HyperText Markup Language.</li>
+            <!--this is the list item tag it is used to create a list item in a list-->
+            <li>It is used to create web pages and web applications.</li>
+            <li>HTML elements are represented by tags.</li>
+        </ul>
+        <p>this is a <code>&lt;p&gt;</code> tag blahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblah<br>blahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblah<br>blahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblah<br>blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah</p>
+        <b>this is a <code>&lt;b&gt;</code>  for bold tag Example: bdfjhfgdjhggfhgvgfdgfdkg</b>
+        </div>
+        <button onclick="showpage1()"> page 1</button>
+        <button onclick="showpage2()"> page 2</button>
+        <script>
+let page1 = `
+<h1>Welcome to Sayan's tutorial</h1>
+<p>This is a simple HTML page to demonstrate the structure of an HTML document.</p>
+
+<ul>
+    <li>HTML stands for HyperText Markup Language.</li>
+    <li>It is used to create web pages and web applications.</li>
+    <li>HTML elements are represented by tags.</li>
+</ul>
+
+<p>this is a &lt;p&gt; tag example</p>
+
+<b>this is a &lt;b&gt; bold tag example</b>
+`;
+
+let page2 = `
+<p>
+HTML provides several basic tags for organizing content on a webpage.
+The &lt;p&gt; tag is used for paragraphs of text, while headings are created
+with tags like &lt;h1&gt; to &lt;h6&gt;.
+Lists use &lt;ul&gt; and &lt;ol&gt;, with items in &lt;li&gt; tags.
+Links use &lt;a&gt; and images use &lt;img&gt;.
+</p>
+`;
+
+function showpage1(){
+    document.getElementById("sayan ghondol").innerHTML = page1;
+}
+
+function showpage2(){
+    document.getElementById("sayan ghondol").innerHTML = page2;
+}
+        </script>
+    </body>
+</html>

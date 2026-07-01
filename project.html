@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <title>
+        School Project Class VI B Atrij Karmakar Roll Number 15
+    </title>
+    <style>
+        H1{
+            text-align: center;
+            color: blue;
+        }
+        body{ Background-color:rgb(238, 104, 104); font-size:large; }
+        P{ Color:red}
+        img{display:block; margin:0 auto;}
+        H2{color:brown}
+    </style>
+    <body>
+        <audio id="bgMusic" autoplay loop preload="auto" style="display:none;">
+            <source src="https://raw.githubusercontent.com/atrij1421-dot/Esp32-background-music-html/main/WhatsApp%20Audio%202026-07-01%20at%209.52.15%20PM.mpeg" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div id="content">
+        <H1>My Portfolio</H1>
+            Welcome viewers!!! This page is all about me. I mean..., this is my portfolio.
+
+            My name is Atrij Karmakar, and I am a student of Class VI B of Hariyana Vidya Mandir, Kolkata. I like to code things; I know basic HTML, C++, and only bits of Python. I make electronic projects using ESP32 (if you want to know about it, go to page 3), Arduino (I don't use it now because it has very high limitations, but it is good for beginners). I mainly use the ESP32 for its speed, accuracy, and its wireless abilities like WiFi and Bluetooth. Here is my image:
+            <br><img src="https://github.com/atrij1421-dot/esp32-ota-builder/blob/main/WhatsApp%20Image%202026-06-26%20at%203.09.20%20PM.jpeg?raw=true" height="150" width="150">
+            <H2>My Skills:</H2>
+            <ul>
+                <li>HTML</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>ESP32</li>
+                <li>Arduino</li>
+                <li>Some PC Building</li>
+            </ul>
+        </div>
+
+        <div id="nav" style="text-align:center; margin:10px;">
+            <button onclick="showPage(1)">About Me</button>
+            <button onclick="showPage(2)">More Info</button>
+            <button onclick="showPage(3)">ESP32 Info</button>
+            <button onclick="showPage(4)">Credits</button>
+        </div>
+
+        <script>
+            const page1 = `        <H1>My Portfolio</H1>
+            Welcome viewers!!! This page is all about me. I mean..., this is my portfolio.
+
+            My name is Atrij Karmakar, and I am a student of Class VI B of Hariyana Vidya Mandir, Kolkata. I like to code things; I know basic HTML, C++, and only bits of Python. I make electronic projects using ESP32 (if you want to know about it, go to page 3), Arduino (I don't use it now because it has very high limitations, but it is good for beginners). I mainly use the ESP32 for its speed, accuracy, and its wireless abilities like WiFi and Bluetooth. Here is my image:
+            <br><img src="https://github.com/atrij1421-dot/esp32-ota-builder/blob/main/WhatsApp%20Image%202026-06-26%20at%203.09.20%20PM.jpeg?raw=true" ALT="My Image" height="150" width="150">
+            <H2>My Skills:</H2>
+            <ul>
+                <li>HTML</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>ESP32</li>
+                <li>Arduino</li>
+                <li>Some PC Building</li>
+            </ul>`;
+
+            const page2 = `I also sometimes fix the computer on which I am making this document. It has problems like loose RAM, dead CMOS battery, and sometimes overheating. I have made electronic projects like clocks, Bluetooth billboards, web video stream (not so good, but reliable), web audio player (full offline) etc. I have used the ESP32 in most of them, except the Bluetooth billboard, as I made it when I was a beginner and I thought ESP32 was expensive like the Raspberry Pi, but actually it is near the UNO's price.
+            <br><br>BTW I also play games and like driving simulators and sandbox simulators like Minecraft (I use it as a simulator with mods).`;
+
+            const page3 = `
+            <H1>ESP32 — Overview</H1>
+            <p>The ESP32 is a low-cost, low-power system-on-chip (SoC) with integrated Wi‑Fi and Bluetooth, widely used for IoT and embedded projects.</p>
+            <H2>Key capabilities</H2>
+            <ul>
+                <li><b>CPU:</b> up to dual-core Xtensa LX6 @240MHz (varies by model)</li>
+                <li><b>Wireless:</b> Wi‑Fi (802.11 b/g/n) and Bluetooth/BLE (varies by variant)</li>
+                <li><b>Peripherals:</b> GPIO, ADC, DAC, SPI, I2C, I2S, UART, PWM, capacitive touch</li>
+                <li><b>Low-power modes:</b> modem-sleep, light-sleep, deep-sleep (tens–hundreds µA in deep-sleep)</li>
+                <li><b>Use-cases:</b> sensors, home automation, wearables, audio streaming, web servers, OTA updates</li>
+            </ul>
+
+            <H2>Common variants and their strengths</H2>
+            <ul>
+                <li><b>ESP32 (original):</b> Dual-core, Wi‑Fi + Bluetooth, great general-purpose choice.</li>
+                <li><b>ESP32-S2:</b> Single-core, improved security features, Wi‑Fi only (no classic BT).</li>
+                <li><b>ESP32-S3:</b> Dual-core with vector extensions (good for ML/inference), Wi‑Fi + Bluetooth, extra IO.</li>
+                <li><b>ESP32-C3:</b> RISC‑V single-core, BLE 5.0 + Wi‑Fi, very low-cost and low-power.</li>
+                <li><b>ESP32-C6:</b> RISC‑V with Wi‑Fi 6 support and BLE (newer high-performance option).</li>
+                <li><b>ESP32-H2:</b> Thread + BLE for low-power mesh/IoT applications.</li>
+            </ul>
+
+            <H2>Typical power characteristics</H2>
+            <ul>
+                <li><b>Active (Wi‑Fi tx):</b> peaks ~100–400 mA depending on transmit power</li>
+                <li><b>CPU active / Wi‑Fi rx:</b> ~20–150 mA</li>
+                <li><b>Modem-sleep / light-sleep:</b> a few mA</li>
+                <li><b>Deep-sleep:</b> tens to hundreds of µA (ideal for battery-powered sensors)</li>
+            </ul>
+
+            <p>Choose a variant based on required features: wireless stack, performance, ML/vector support, power budget, and peripheral needs. For full specs, see Espressif's documentation.</p>`;
+
+            const bgMusic = document.getElementById('bgMusic');
+
+            function tryPlayBackgroundMusic() {
+                if (!bgMusic) return;
+                bgMusic.volume = 0.2;
+                bgMusic.play().catch(() => {});
+            }
+
+            document.addEventListener('click', tryPlayBackgroundMusic, { once: true });
+            document.addEventListener('touchstart', tryPlayBackgroundMusic, { once: true });
+            document.addEventListener('keydown', tryPlayBackgroundMusic, { once: true });
+            tryPlayBackgroundMusic();
+
+            function showPage(n){
+                const content = document.getElementById('content');
+                if(!content) return;
+                if(n === 1) content.innerHTML = page1;
+                else if(n === 2) content.innerHTML = page2;
+                else if(n === 3) content.innerHTML = page3;
+                else if(n === 4) content.innerHTML = page4;
+            }
+            window.onload = () => showPage(1);
+            const page4 = `
+            <H1>Credits</H1>
+            <p>Created by Atrij Karmakar.</p>
+            <p>Made with VS Code with HTML boilerplate and CSS support extensions. For more info, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">click here</a> to visit a website with information about HTML.</p>
+            <p>Special thanks to Espressif for the ESP32 platform and to open-source projects used during learning.</p>`;
+        </script>
+    </body>
+</html>
